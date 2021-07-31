@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/my_blog?serverTimezone=UTC&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false
+    password: 123
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    async:
+      request-timeout: 60000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+logging:
+  level:
+    org.myblog.blog.mapper: debug
